@@ -37,7 +37,9 @@ export const logout =  (req , res) => {
 }
 
 export const signup = async (req , res) => {
+    console.log("signup attempted");
     try {
+        console.log("signup attemped");
         const {fullName , username , password , confirmPassword , gender} = req.body;
         if(password !== confirmPassword) {
             return res.status(400).json({error : "passwords do not match"});
